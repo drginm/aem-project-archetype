@@ -15,7 +15,7 @@
 */-->
 #set( $symbol_dollar = '$' )
 <!--/* Include the site client libraries (loading only the JS in the footer, CSS was loaded in the header) */-->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${symbol_dollar}{clientLib.js @ categories='${cssId}.all'}" data-sly-unwrap/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${symbol_dollar}{clientLib.js @ categories='${cssId}.site'}" data-sly-unwrap/>
 
 <!--/* Include Adobe Dynamic Tag Management libraries for the footer */-->
 <sly data-sly-resource="${symbol_dollar}{@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap/>
