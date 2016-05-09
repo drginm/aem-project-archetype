@@ -40,6 +40,8 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
 
+        <org.slf4j.version>1.7.6</org.slf4j.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -181,7 +183,7 @@
                         <dependency>
                             <groupId>org.slf4j</groupId>
                             <artifactId>slf4j-simple</artifactId>
-                            <version>1.5.11</version>
+                            <version>${org.slf4j.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -561,7 +563,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.5.11</version>
+                <version>${org.slf4j.version}</version>
                 <scope>provided</scope>
             </dependency>
             <!-- Apache Sling Dependencies -->
@@ -616,7 +618,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
-                <version>1.5.11</version>
+                <version>${org.slf4j.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
