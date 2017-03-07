@@ -89,8 +89,8 @@
                                     <version>[2.2.1,)</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <message>Project must be compiled with Java 7 or higher</message>
-                                    <version>1.7.0</version>
+                                    <message>Project must be compiled with Java 8 or higher</message>
+                                    <version>1.8.0</version>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
@@ -102,8 +102,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <!-- Maven IntelliJ IDEA Plugin -->
@@ -112,7 +112,7 @@
                 <artifactId>maven-idea-plugin</artifactId>
                 <version>2.2.1</version>
                 <configuration>
-                    <jdkLevel>1.7</jdkLevel>
+                    <jdkLevel>1.8</jdkLevel>
                     <linkModules>true</linkModules>
                     <downloadSources>true</downloadSources>
                 </configuration>
@@ -215,11 +215,10 @@
                 <plugin>
                     <groupId>org.apache.sling</groupId>
                     <artifactId>maven-sling-plugin</artifactId>
-                    <version>2.1.0</version>
+                    <version>2.1.8</version>
                     <configuration>
-                        <slingUrl>http://${aem.host}:${aem.port}/crx/repository/crx.default</slingUrl>
-                        <usePut>true</usePut>
-                        <failOnError>true</failOnError>
+                        <slingUrl>http://${aem.host}:${aem.port}/system/console</slingUrl>
+                        <deploymentMethod>WebConsole</deploymentMethod>
                     </configuration>
                 </plugin>
                 <!-- Content Package Plugin -->
@@ -450,12 +449,6 @@
                                     <goals>
                                         <goal>install</goal>
                                     </goals>
-                                    <configuration>
-                                        <!-- Note that this requires /apps/${appsFolderName}/install to exist!!          -->
-                                        <!--    This is typically the case when ui.apps is deployed first                -->
-                                        <!--    Otherwise, create /apps/${appsFolderName}/install manually (CRXDE|Lite)  -->
-                                        <slingUrlSuffix>/apps/${appsFolderName}/install/</slingUrlSuffix>
-                                    </configuration>
                                 </execution>
                             </executions>
                         </plugin>
