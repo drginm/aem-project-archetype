@@ -18,7 +18,11 @@
             sling:resourceType="${appsFolderName}/components/structure/topnav"/>
         <par
             jcr:primaryType="nt:unstructured"
+#if($aemVersion == "6.2" || $aemVersion == "6.3")
             sling:resourceType="wcm/foundation/components/responsivegrid">
+#else
+            sling:resourceType="wcm/foundation/components/parsys">
+#end
             <title_0
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Service Component"

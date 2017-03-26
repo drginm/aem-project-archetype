@@ -19,18 +19,24 @@
             sling:resourceType="${appsFolderName}/components/structure/topnav"/>
         <par
             jcr:primaryType="nt:unstructured"
+#if($aemVersion == "6.2" || $aemVersion == "6.3")
             sling:resourceType="wcm/foundation/components/responsivegrid">
+#else
+            sling:resourceType="wcm/foundation/components/parsys">
+#end
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="${appsFolderName}/components/content/text"
                 text="&lt;p>This is a content page&lt;/p>"
                 textIsRich="true"/>
         </par>
+#if($aemVersion == "6.2" || $aemVersion == "6.3")
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone jcr:primaryType="nt:unstructured" title="{String}Phone" width="{Decimal}768"/>
                 <tablet jcr:primaryType="nt:unstructured" title="{String}Tablet" width="{Decimal}1200"/>
             </breakpoints>
         </cq:responsive>
+#end
     </jcr:content>
 </jcr:root>
