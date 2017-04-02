@@ -1,0 +1,17 @@
+{
+  "name": "${artifactId}",
+  "version": "0.1.0",
+  "dependencies": {
+    "bower": "~1.8.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "prebuild": "npm install",
+    "build": "gulp",
+    "unitTests": "karma start karma.conf.js",
+    "integrationTests": "wdio"
+  },
+  "private": true
+}

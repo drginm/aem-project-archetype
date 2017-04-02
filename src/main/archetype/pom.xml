@@ -26,6 +26,7 @@
         <module>core</module>
         <module>ui.apps</module>
         <module>ui.content</module>
+        <module>ui.nodejs</module>
         <module>it.tests</module>
         <module>it.launcher</module>
     </modules>
