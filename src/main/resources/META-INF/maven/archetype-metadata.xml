@@ -37,6 +37,9 @@
         <requiredProperty key="cssId" />
         <requiredProperty key="componentGroupName" />
         <requiredProperty key="siteName"/>
+        <requiredProperty key="aemVersion">
+            <defaultValue>6.2</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
     <modules>
@@ -170,6 +173,17 @@
                     <directory>src/test/java</directory>
                     <includes>
                         <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}.ui.nodejs" dir="ui.nodejs" name="ui.nodejs">
+            <fileSets>
+                <fileSet filtered="true" packaged="false"
+                    encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>**/*.*</include>
                     </includes>
                 </fileSet>
             </fileSets>
