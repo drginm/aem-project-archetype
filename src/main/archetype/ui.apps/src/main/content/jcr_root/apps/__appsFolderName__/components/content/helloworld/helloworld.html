@@ -15,6 +15,7 @@
 */-->
 #set( $symbol_dollar = '$' )
 <p data-sly-test="${symbol_dollar}{properties.text}">Text property: ${symbol_dollar}{properties.text}</p>
+<p data-sly-test="${symbol_dollar}{currentStyle.defaultText}">Global default text property: ${symbol_dollar}{currentStyle.defaultText}</p>
 
 <pre data-sly-use.hello="${package}.core.models.HelloWorldModel">
 HelloWorldModel says:
